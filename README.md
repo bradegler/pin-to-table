@@ -4,6 +4,8 @@ Pin To Table is a mobile application that will manage the lifecycle of a recipe 
 
 The primary goal for phase one is to produce an app that can create a unified shopping list from a set of pinned recipes.
 
+[![Build Status](https://travis-ci.org/bradegler/pin-to-table.svg?branch=master)](https://travis-ci.org/bradegler/pin-to-table)
+
 See [Requirements](REQUIREMENTS.md) for details.
 
 
