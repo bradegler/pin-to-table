@@ -3,5 +3,3 @@
 /vendor/
 /test/tests.*
 /test/coverage.*
-
-glide.lock
