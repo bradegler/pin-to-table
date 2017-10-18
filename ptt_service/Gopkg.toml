@@ -1,3 +1,7 @@
 [[constraint]]
   name = "github.com/spf13/cobra"
   branch = "master"
+
+[[constraint]]
+  name = "github.com/gorilla/mux"
+  branch = "master"
