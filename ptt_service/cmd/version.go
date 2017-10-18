@@ -5,13 +5,7 @@ import (
 	"runtime"
 
 	"github.com/spf13/cobra"
-)
-
-var (
-	// Version contains the current version.
-	Version = "dev"
-	// BuildDate contains a string with the build date.
-	BuildDate = "unknown"
+	"ptt/domain"
 )
 
 func init() {
@@ -23,8 +17,8 @@ var versionCmd = &cobra.Command{
 	Short: "Print version",
 	Long:  `Display version and build information about ptt.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("ptt %s\n", Version)
-		fmt.Printf("  Build date: %s\n", BuildDate)
+		fmt.Printf("ptt %s\n", domain.Version)
+		fmt.Printf("  Build date: %s\n", domain.BuildDate)
 		fmt.Printf("  Built with: %s\n", runtime.Version())
 	},
 }

@@ -1,9 +1,10 @@
 package domain
 
-type recipeType int
+// RecipeType blah blah
+type RecipeType int
 
 const (
-	pinRecipe recipeType = iota
+	pinRecipe RecipeType = iota
 	userRecipe
 )
 

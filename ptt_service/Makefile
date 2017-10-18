@@ -1,6 +1,7 @@
 PACKAGE  = ptt
 DATE    ?= $(shell date +%FT%T%z)
-VERSION ?= $(shell git describe --tags --always --dirty --match=v* 2> /dev/null || \
+
+VERSION ?= 1.0.0-$(shell git describe --tags --always --dirty --match=v* 2> /dev/null || \
 			cat $(CURDIR)/.version 2> /dev/null || echo v0)
 GOPATH   = $(CURDIR)/.gopath~
 BIN      = $(GOPATH)/bin
@@ -20,7 +21,7 @@ M = $(shell printf "\033[34;1m▶\033[0m")
 all: fmt lint vendor | $(BASE) ; $(info $(M) building executable…) @ ## Build program binary
 	$Q cd $(BASE) && $(GO) build \
 		-tags release \
-		-ldflags '-X $(PACKAGE)/cmd.Version=$(VERSION) -X $(PACKAGE)/cmd.BuildDate=$(DATE)' \
+		-ldflags '-X $(PACKAGE)/domain.Version=$(VERSION) -X $(PACKAGE)/domain.BuildDate=$(DATE)' \
 		-o bin/$(PACKAGE) main.go
 
 $(BASE): ; $(info $(M) setting GOPATH…)
