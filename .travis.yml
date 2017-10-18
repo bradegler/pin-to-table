@@ -15,7 +15,7 @@ before_script:
 script:
   - cd ptt_mobile
   - ../flutter/bin/flutter test
-  - cd ptt_service
+  - cd ../ptt_service
   - make
 cache:
   directories:
