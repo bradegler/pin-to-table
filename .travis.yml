@@ -9,14 +9,19 @@ addons:
     packages:
       - libstdc++6
       - fonts-droid
+
+language: go
+install:
+  - go version
+
 before_script:
   - git clone https://github.com/flutter/flutter.git -b alpha --depth 1
   - ./flutter/bin/flutter doctor
-  - gimme 1.9.1
 script:
   - cd ptt_mobile
   - ../flutter/bin/flutter test
-  - cd ../ptt_service
+  - cd ..
+  - cd ptt_service
   - make
 cache:
   directories:

@@ -1,7 +1,7 @@
 PACKAGE  = ptt
 DATE    ?= $(shell date +%FT%T%z)
-
-VERSION ?= 1.0.0-$(shell git describe --tags --always --dirty --match=v* 2> /dev/null || \
+TRAVIS_BUILD_NUMBER ?= 0
+VERSION ?= 1.0.0-${TRAVIS_BUILD_NUMBER}-$(shell git describe --tags --always --dirty --match=v* 2> /dev/null || \
 			cat $(CURDIR)/.version 2> /dev/null || echo v0)
 GOPATH   = $(CURDIR)/.gopath~
 BIN      = $(GOPATH)/bin
