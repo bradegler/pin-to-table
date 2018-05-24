@@ -8,8 +8,8 @@ import (
 
 // ServerStatus is a simple domain object for reporting server status
 type ServerStatus struct {
-	Status  string
-	Version string
+	Status  string `json:"status"`
+	Version string `json:"version"`
 }
 
 // IndexHandler represents the root / uri of the server
